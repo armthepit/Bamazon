@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/armthepit/Bamazon/issues"
   },
-  "homepage": "https://github.com/armthepit/Bamazon#readme"
+  "homepage": "https://github.com/armthepit/Bamazon#readme",
+  "dependencies": {
+    "inquirer": "^1.2.2",
+    "mysql": "^2.11.1"
+  }
 }
