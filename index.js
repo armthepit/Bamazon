@@ -79,9 +79,19 @@ function purchaseQuantity(itemid, productName, price, stockQuantity) {
 }
 
 //Check inventory to see if order can be filled
-
+function inventoryCheck(itemid, productName, price, stockQuantity, purchaseQuantity) {
+    if (purchaseQuantity <= stockQuantity) {
+        updateInventory(itemid, productName, price, stockQuantity, purchaseQuantity);
+    } else {
+        console.log("\n We are unable to fill your order for " + productName + ". There's only " + stockQuantity + " available. Please update quantity.");
+        placeOrder();
+    }
 }
 
+//Update inventory after sale
+function updateInventory(itemid, productName, price, stockQuantity, purchaseQuantity) {
+
+}
 
 function runMainMenu() {
 
