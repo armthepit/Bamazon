@@ -109,7 +109,20 @@ function completeOrder(itemid, productName, price, stockQuantity, purchaseQuanti
 
 //Ask if customer wants to keep shopping.
 function continueShopping() {
-
+    inquirer.prompt({
+        name: "answer",
+        type: "input",
+        message: "\n Do you need anything else (y/n)?"
+    }).then(function(answer) {
+        var answer = answer.answer.toLowerCase();
+        if (answer == 'y') {
+            console.log("\n");
+            productList();
+        } else {
+            console.log("\nThank you again for dropping by.");
+            connection.end();
+        }
+    })  
 }
 
 
