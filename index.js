@@ -90,11 +90,18 @@ function inventoryCheck(itemid, productName, price, stockQuantity, purchaseQuant
 
 //Update inventory after sale
 function updateInventory(itemid, productName, price, stockQuantity, purchaseQuantity) {
+    stockQuantity -= purchaseQuantity;
+    var query = 'UPDATE products SET stockquantity = ? WHERE itemid = ?';
+    connection.query(query, [stockQuantity, itemid], function(error, result) {
+        if (error) throw error;
+        completeOrder(itemid, productName, price, stockQuantity, purchaseQuantity);
+    });
+}
+
+//Sale summary
 
 }
 
-function runMainMenu() {
 
-}
 
 dbConnect();
