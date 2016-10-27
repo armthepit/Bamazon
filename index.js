@@ -63,6 +63,22 @@ function placeOrder() {
 
 //Ask for quantity to purchase
 function purchaseQuantity(itemid, productName, price, stockQuantity) {
+    inquirer.prompt({
+        name: "quantity",
+        type: "input",
+        message: "\n How many would you like to purchase?"        
+    }).then(function(quantity) {
+        var purchaseQuantity = parseInt(quantity.quantity);
+        if (purchaseQuantity > 0) {
+            inventoryCheck(itemid, productName, price, stockQuantity, purchaseQuantity);
+        } else {
+            console.log("\n Please check the quantity to purchase.");
+            placeOrder();
+        }
+    })
+}
+
+//Check inventory to see if order can be filled
 
 }
 
