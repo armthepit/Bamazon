@@ -99,8 +99,19 @@ function updateInventory(itemid, productName, price, stockQuantity, purchaseQuan
 }
 
 //Sale summary
+function completeOrder(itemid, productName, price, stockQuantity, purchaseQuantity) {
+    console.log('\nThank you Customer ' + customer + ' for your order.');
+    // console.log(purchaseQuantity);
+    console.log( "You are purchasing " + purchaseQuantity + ' ' + productName + " at $" + price.toFixed(2) + ' each.');
+    console.log( "Your total is $"  + price * purchaseQuantity.toFixed(2)); 
+    continueShopping();
+}
+
+//Ask if customer wants to keep shopping.
+function continueShopping() {
 
 }
+
 
 
 
