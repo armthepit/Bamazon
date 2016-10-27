@@ -19,6 +19,7 @@
   "dependencies": {
     "clear": "0.0.1",
     "inquirer": "^1.2.2",
-    "mysql": "^2.11.1"
+    "mysql": "^2.11.1",
+    "table-master": "^1.0.3"
   }
 }

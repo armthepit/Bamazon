@@ -21,3 +21,5 @@ INSERT INTO products (productname,departmentname,price,stockquantity) VALUES ('B
 INSERT INTO products (productname,departmentname,price,stockquantity) VALUES ('Tortillas','Bakery',2.19,15);
 INSERT INTO products (productname,departmentname,price,stockquantity) VALUES ('Pop Corn','Snacks',1.95,16);
 INSERT INTO products (productname,departmentname,price,stockquantity) VALUES ('Potato Chips','Snacks',2.50,48);
+
+SELECT * FROM products WHERE itemid=?1;

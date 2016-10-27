@@ -1,35 +1,34 @@
 var mysql = require('mysql');
 var inquirer = require('inquirer');
 var clear = require('clear');
+var tab = require('table-master');
 
 var connection = mysql.createConnection({
     host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "Saigon469", //Your password
+    port: "3306",
+    user: "homework",
+    password: "homework", //Your password
     database: "bamazondb"
 })
 
 connection.connect(function(error) {
     if (error) throw error;
     clear();
+    console.log('Serving customer ' + connection.threadId + '\n');
 })
 
 connection.query('SELECT * FROM products', function(error, result) {
-    console.log('Product Id Product Name Unit Price');
-    console.log("-----------------------------------");
+    var choiceArray = [];
     for (var i = 0; i < result.length; i++) {
-        console.log(result[i].itemid + " | " + result[i].productname + " | " + result[i].price);
+        choiceArray.push(result[i]);
     }
-    console.log("-----------------------------------");
+    console.log('Bamazon Product Catalog\n')
+    console.table(choiceArray, "lllrr");
 })
 
-connection.end();
 
 function runMainMenu() {
 
 }
 
 runMainMenu();
-
-
