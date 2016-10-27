@@ -22,4 +22,4 @@ INSERT INTO products (productname,departmentname,price,stockquantity) VALUES ('T
 INSERT INTO products (productname,departmentname,price,stockquantity) VALUES ('Pop Corn','Snacks',1.95,16);
 INSERT INTO products (productname,departmentname,price,stockquantity) VALUES ('Potato Chips','Snacks',2.50,48);
 
-SELECT * FROM products WHERE itemid=?1;
+UPDATE `bamazondb`.`products` SET `stockquantity` = 5 WHERE `itemid` = 1;
