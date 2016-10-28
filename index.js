@@ -103,7 +103,7 @@ function completeOrder(itemid, productName, price, stockQuantity, purchaseQuanti
     console.log('\nThank you Customer ' + customer + ' for your order.');
     // console.log(purchaseQuantity);
     console.log( "You are purchasing " + purchaseQuantity + ' ' + productName + " at $" + price.toFixed(2) + ' each.');
-    console.log( "Your total is $"  + price * purchaseQuantity.toFixed(2)); 
+    console.log( "Your total is $"  + (price * purchaseQuantity).toFixed(2)); 
     continueShopping();
 }
 
