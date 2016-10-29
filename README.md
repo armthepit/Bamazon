@@ -39,3 +39,9 @@ This screen shows error when customer tries to purchase more than what's in inve
 This screen shows error when customer enters a quantity of 0.
 
 ![Image of Error](https://github.com/armthepit/Bamazon/blob/master/assets/images/screen6.jpg?raw=true)
+
+### Error
+
+This screen shows error when customer enters a item id for a product not in the Bamazon catalog.
+
+![Image of Error](https://github.com/armthepit/Bamazon/blob/master/assets/images/screen7.jpg?raw=true)
