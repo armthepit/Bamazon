@@ -45,3 +45,10 @@ This screen shows error when customer enters a quantity of 0.
 This screen shows error when customer enters a item id for a product not in the Bamazon catalog.
 
 ![Image of Error](https://github.com/armthepit/Bamazon/blob/master/assets/images/screen7.jpg?raw=true)
+
+### Stack Used
+	* Node Packages
+		* Inquirer
+		* Table-Master
+		* Clear
+	* MySQL database
